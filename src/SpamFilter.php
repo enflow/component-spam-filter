@@ -25,7 +25,7 @@ class SpamFilter
     public function __construct(string $blacklistDirectory = null)
     {
         if ($blacklistDirectory === null) {
-            $blacklistDirectory = __DIR__ . '/../../spam-filter-blacklists';
+            $blacklistDirectory = $this->getDefaultBlacklistDirectory();
         }
 
         if (!file_exists($blacklistDirectory)) {
@@ -69,5 +69,14 @@ class SpamFilter
         }
 
         return false;
+    }
+
+    private function getDefaultBlacklistDirectory(): string
+    {
+        if (file_exists($blacklistDirectory = __DIR__ . '/../../spam-filter-blacklists')) {
+            return $blacklistDirectory;
+        }
+
+        return __DIR__ . '/../vendor/enflow/spam-filter-blacklists';
     }
 }

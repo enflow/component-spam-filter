@@ -1,0 +1,42 @@
+{
+    "name": "enflow/component-spam-filter",
+    "description": "Simple PHP spam filter which checks input against a blacklist",
+    "homepage": "https://github.com/enflow-nl/component-spam-filter",
+    "keywords": [
+        "enflow",
+        "spam",
+        "filter",
+        "blacklist"
+    ],
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Michel Bardelmeijer",
+            "email": "michel@enflow.nl"
+        },
+        {
+            "name": "Andreas Renberg",
+            "email": "contact@iqandreas.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "enflow/spam-filter-blacklists": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Enflow\\Component\\SpamFilter\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Enflow\\Component\\SpamFilter\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
+}

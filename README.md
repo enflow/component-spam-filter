@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/enflow/component-spam-filter.svg?style=flat-square)](https://packagist.org/packages/enflow/component-spam-filter)
 [![Software License](https://img.shields.io/badge/license-GPL3-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/enflow-nl/component-spam-filter/master.svg?style=flat-square)](https://travis-ci.org/spatie/component-spam-filter)
+[![Build Status](https://img.shields.io/travis/enflow-nl/component-spam-filter/master.svg?style=flat-square)](https://travis-ci.org/enflow-nl/component-spam-filter)
 [![Total Downloads](https://img.shields.io/packagist/dt/enflow/component-spam-filter.svg?style=flat-square)](https://packagist.org/packages/enflow/component-spam-filter)
 
 The `enflow/component-spam-filter` package provides a easy way to check if a given text matches any of the [blacklists](https://github.com/enflow-nl/spam-filter-blacklists).

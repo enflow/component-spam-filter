@@ -60,7 +60,7 @@ class SpamFilter
                 continue;
             }
 
-            $match = preg_match("/$regex/i", $text, $regex_match);
+            $match = preg_match("/$regex/i", $text, $regexMatch);
             if ($match) {
                 return true;
             } elseif ($match === false) {

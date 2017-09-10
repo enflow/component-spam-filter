@@ -25,7 +25,7 @@ class SpamFilter
     public function __construct(string $blacklistDirectory = null)
     {
         if ($blacklistDirectory === null) {
-            $blacklistDirectory = __DIR__ . '/../vendor/enflow/spam-filter-blacklists';
+            $blacklistDirectory = __DIR__ . '/../../spam-filter-blacklists';
         }
 
         if (!file_exists($blacklistDirectory)) {

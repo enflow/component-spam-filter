@@ -14,6 +14,7 @@ class SpamFilterTest extends TestCase
 
         $this->assertTrue($spamFilter->isPossibleSpam('viagra'));
         $this->assertTrue($spamFilter->isPossibleSpam('no WIN no FEE'));
+        $this->assertTrue($spamFilter->isPossibleSpam('fun gambling'));
         $this->assertFalse($spamFilter->isPossibleSpam('computer store'));
     }
 

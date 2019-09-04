@@ -33,4 +33,24 @@ class SpamFilterTest extends TestCase
 
         new SpamFilter(__DIR__ . '/resources/nada-blacklists');
     }
+
+    public function test_spam()
+    {
+        $spamFilter = new SpamFilter();
+
+        $lines = file(__DIR__ . '/resources/spam.txt');
+        foreach ($lines as $line => $text) {
+            $this->assertTrue($spamFilter->isPossibleSpam($text, "Line {$line} must be marked as spam."));
+        }
+    }
+
+    public function test_ham()
+    {
+        $spamFilter = new SpamFilter();
+
+        $lines = file(__DIR__ . '/resources/ham.txt');
+        foreach ($lines as $line => $text) {
+            $this->assertFalse($spamFilter->isPossibleSpam($text, "Line {$line} must NOT be marked as spam."));
+        }
+    }
 }

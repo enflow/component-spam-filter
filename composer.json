@@ -20,11 +20,11 @@
         }
     ],
     "require": {
-        "php": "^7.1",
+        "php": "^7.1.3",
         "enflow/spam-filter-blacklists": "dev-master"
     },
     "require-dev": {
-        "phpunit/phpunit": "~6.0"
+        "phpunit/phpunit": "~8.0"
     },
     "autoload": {
         "psr-4": {
